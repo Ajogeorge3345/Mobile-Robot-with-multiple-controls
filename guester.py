@@ -44,11 +44,11 @@ while True:
 
     if hands:
         # Hand 1
-        hand1 = hands[0]
-        fingers1 = detector.fingersUp(hand1)
+        hand = hands[0]
+        fingers = detector.fingersUp(hand)
 
         # Detect hand action based on fingers up
-        action = detect_hand_action(fingers1)
+        action = detect_hand_action(fingers)
         print(f"Detected Action: {action}")
 
         # Send corresponding signals to Arduino via Bluetooth
